@@ -12,3 +12,32 @@ body {
     font-weight: 700;
   }
 
+  .nav-title{
+    font-family: 'Shrikhand', cursive;
+    font-size: 85px;
+    text-align: center;
+   
+  }
+
+.nav {
+ 
+  top: 50px;
+  right: 0px;
+  background-color: #FFDEA6;
+
+}
+
+.nav-item{
+  color: #37699E;
+  font-size: xx-large;
+  font-family: 'Shrikhand', cursive;;
+}
+
+.button {
+ background-color: #37699E;
+ display: flex;
+ float:right;
+}
+
+
+

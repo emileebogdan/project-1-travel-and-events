@@ -8,60 +8,63 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/style.css" />
   <link rel="stylesheet" href="./assets/searchresults.css" />
-</head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Edu+VIC+WA+NT+Beginner:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
 
-<body>
-
-    
-
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item">
-          <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-        </a>
-      </div>
-    
-      <div class="nav-center">
-        <a class="nav-item">
-          <span class="icon">
-            <i class="fa fa-github"></i>
-          </span>
-        </a>
-        <a class="nav-item">
+  <nav class="nav">
+    <div class="nav-left">
+      <a class="nav-item">
+    <div class="nav-title">Our Project</div>
+      </a>
+    </div>
+  
+    <div class="nav-center">
+      <a class="nav-item">
+        <span class="icon">
+          <i class="fa fa-github"></i>
+        </span>
+      </a>
+      <a class="nav-item">
+        <span class="icon">
+          <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+    </div>
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-right nav-menu">
+      <a class="nav-item">
+        Home
+      </a>
+      <a class="nav-item">
+        Documentation
+      </a>
+      <a class="nav-item">
+        Blog
+      </a>
+  
+      <span class="nav-item">
+        <a class="button" >
           <span class="icon">
             <i class="fa fa-twitter"></i>
           </span>
+          <span>Tweet</span>
         </a>
-      </div>
-      <!-- This "nav-menu" is hidden on mobile -->
-      <!-- Add the modifier "is-active" to display it on mobile -->
-      <div class="nav-right nav-menu">
-        <a class="nav-item">
-          Home
+        <a class="button ">
+          <span class="icon">
+            <i class="fa fa-download"></i>
+          </span>
+          <span>Download</span>
         </a>
-        <a class="nav-item">
-          Contact Us
-        </a>
-        <a class="nav-item">
-          About us!
-        </a>
-    
-        <span class="nav-item">
-          <a class="button" >
-            <span class="icon">
-              <i class="fa fa-twitter"></i>
-            </span>
-            <span>Book a flight!</span>
-          </a>
-          <a class="button is-primary">
-            <span class="icon">
-              <i class="fa fa-download"></i>
-            </span>
-            <span>Find an Event!</span>
-          </a>
-        </span>
-      </div>
-    </nav>
+      </span>
+    </div>
+  </nav>
+</head>
+
+
+
+<body>
   <div class="flex-row align-center justify-center min-100-vh bg-primary">
     <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
       <h1 class="text-primary">Our Project</h1>
