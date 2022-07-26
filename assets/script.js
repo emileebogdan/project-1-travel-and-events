@@ -4,7 +4,6 @@ function handleSearchFormSubmit(event) {
   event.preventDefault();
 
   var searchInputVal = document.querySelector('#search-input').value;
-  var dateInputVal = document.querySelector('#date-inpute').value;
 
   if (!searchInputVal) {
     console.error('You need a search input value!');
