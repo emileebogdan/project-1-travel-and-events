@@ -14,50 +14,15 @@
 
   <nav class="nav">
     <div class="nav-left">
-      <a class="nav-item">
-    <div class="nav-title">Our Project</div>
+    <div class="nav-title">Safety Search</div>
       </a>
     </div>
   
-    <div class="nav-center">
-      <a class="nav-item">
-        <span class="icon">
-          <i class="fa fa-github"></i>
-        </span>
-      </a>
-      <a class="nav-item">
-        <span class="icon">
-          <i class="fa fa-twitter"></i>
-        </span>
+    
       </a>
     </div>
     <!-- This "nav-menu" is hidden on mobile -->
     <!-- Add the modifier "is-active" to display it on mobile -->
-    <div class="nav-right nav-menu">
-      <a class="nav-item">
-        Home
-      </a>
-      <a class="nav-item">
-        Documentation
-      </a>
-      <a class="nav-item">
-        Blog
-      </a>
-  
-      <span class="nav-item">
-        <a class="button" >
-          <span class="icon">
-            <i class="fa fa-twitter"></i>
-          </span>
-          <span>Tweet</span>
-        </a>
-        <a class="button ">
-          <span class="icon">
-            <i class="fa fa-download"></i>
-          </span>
-          <span>Download</span>
-        </a>
-      </span>
     </div>
   </nav>
 </head>
@@ -67,22 +32,10 @@
 <body>
   <div class="flex-row align-center justify-center min-100-vh bg-primary">
     <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
-      <h1 class="text-primary">Our Project</h1>
-      
+    
+      <h1 class="text-primary">Natural Disaster Search</h1>
       <form id="search-form" class="form w-100">
-        <input id="search-input" class="form-input w-100" type="text" placeholder="DESTINATION">
-        <select id="format-input" class="form-input w-100">
-          <option class = "dropdown">Month</option>
-          <option value="concerts">**Month**</option>
-        </select>
-        <select id="format-input" class="form-input w-100">
-            <option value="" disabled selected>Day</option>
-            <option value="concerts">**Day**</option>
-          </select>
-          <select id="format-input" class="form-input w-100">
-            <option value="" disabled selected>Year</option>
-            <option value="concerts">**Year**</option>
-          </select>
+        <input id="search-input" class="form-input w-100" type="text" placeholder="STATE">
         <button class="button is-success is-rounded">SEARCH</button>
       </form>
     </div>
