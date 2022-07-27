@@ -1,6 +1,16 @@
-
-
-
+:root {
+  /* Master Color Theme - change color theme here */
+    --white: #fff;
+    --blueA: #56A6A6;
+    --blueB: #356666;
+    --blueC: #77E6E6;
+    --blueD: #7EF2F2;
+    --blueE: #6BCCCC;
+    --highlight: #E66312; 
+    --bkColor: #13293d;
+    
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
 body {
     font-family: 'Fira Sans', sans-serif;
@@ -16,11 +26,11 @@ body {
     font-weight: 700;
   }
 
-  .nav-title{
+.nav-title{
     font-family: 'Shrikhand', cursive;
     font-size: 85px;
     text-align: center;
-    color: #37699E;
+    color: var(--blueD);
    
   }
 
@@ -28,7 +38,7 @@ body {
  
   top: 50px;
   right: 0px;
-  background-color: #FFDEA6;
+  background-color: var(--bkColor);
 
 }
 
