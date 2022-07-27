@@ -14,7 +14,6 @@
 
 body {
     font-family: 'Fira Sans', sans-serif;
-    /* background-color: var(--bkColor); */
   }
   
   h1 {
@@ -61,14 +60,10 @@ form {
   margin: 75px;
 }
 
-#state1,
-#state2 {
+#state {
   height: 55px;
-  margin-bottom: 30px;
 }
 
-.searchbox {
-  background-color: var(--blueA)
-}
+placeholder
 
 
