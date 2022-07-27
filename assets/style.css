@@ -54,5 +54,14 @@ body {
  float:right;
 }
 
+form {
+  margin: 75px;
+}
+
+#state {
+  height: 55px;
+}
+
+placeholder
 
 
