@@ -3,7 +3,7 @@ var submitEl = document.querySelector('#submit-button');
 
 
 submitEl.addEventListener('click', handleSearchFormSubmit);
-function handleSearchFormSubmit(event) { 
+function handleSearchFormSubmit(event) {
   event.preventDefault();
   var searchInputVal = document.querySelector('#search-input').value
   getLatLng(searchInputVal)
@@ -15,12 +15,27 @@ function getLatLng(searchInputVal) {
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({
     address: searchInputVal
-  }, function(results, status) {
+  }, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       var lat = results[0].geometry.location.lat();
       var lng = results[0].geometry.location.lng();
       console.log(lat, lng);
+      disasterSearch(lat, lng)
+
     }
   });
 }
+
+function disasterSearch(lat, lng) {
+
+  var url = "https://eonet.gsfc.nasa.gov/api/v3/events?bbox=" + lng + "," + lat + "," + lng + "," + lat
+  fetch(url)
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (data) {
+      console.log(data)
+    })
+}
+
 
