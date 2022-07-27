@@ -58,10 +58,14 @@ form {
   margin: 75px;
 }
 
-#state {
+#state1,
+#state2 {
   height: 55px;
+  margin-bottom: 30px;
 }
 
-placeholder
+.searchbox {
+  background-color: var(--blueA)
+}
 
 
