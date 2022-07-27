@@ -60,10 +60,14 @@ form {
   margin: 75px;
 }
 
-#state {
+#state1, #state2 {
   height: 55px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-placeholder
-
+input::placeholder {
+  font-size: larger;
+  font-weight: bold;
+}
 
