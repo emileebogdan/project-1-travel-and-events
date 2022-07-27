@@ -6,41 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Library of Congress Search</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" href="./assets/style.css" />
   <link rel="stylesheet" href="./assets/searchresults.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Edu+VIC+WA+NT+Beginner:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
 
+
   <nav class="nav">
     <div class="nav-left">
     <div class="nav-title">Safety Search</div>
-      </a>
-    </div>
-  
-    
-      </a>
-    </div>
-    <!-- This "nav-menu" is hidden on mobile -->
-    <!-- Add the modifier "is-active" to display it on mobile -->
-    </div>
+ </div>
   </nav>
 </head>
 
 
 
 <body>
+  <div id="map"></div>
   <div class="flex-row align-center justify-center min-100-vh bg-primary">
     <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
     
       <h1 class="text-primary">Natural Disaster Search</h1>
       <form id="search-form" class="form w-100">
         <input id="search-input" class="form-input w-100" type="text" placeholder="STATE">
-        <button class="button is-success is-rounded">SEARCH</button>
+        <button id="submit-button" class="button is-success is-rounded">SEARCH</button>
       </form>
     </div>
   </div>
-
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSwTVD5Y3xjosLm2rirBlAGB6M0vvm-WE&callback=initMap&v=weekly"
+      defer
+    ></script>
   <script src="./assets/script.js"></script>
 </body>
 
