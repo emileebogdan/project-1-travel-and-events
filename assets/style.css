@@ -22,8 +22,8 @@ body {
     text-align: center;
     background: inherit;
     display: inline-block; 
-    font-size: 18px; 
-    line-height: 22px; 
+    font-size: 42px;
+    font-style: italic; 
   }
   h2,
   h3,
@@ -46,12 +46,11 @@ body {
  
   top: 50px;
   right: 0px;
-  background-color: var(--bkColor);
+  background-color: inherit;
 
 }
 
 .button {
- background-color: #37699E;
  display: flex;
  float:right;
 }
