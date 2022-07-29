@@ -52,13 +52,13 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
       return response.json()
     })
     .then(function (data) {
-      console.log(data)
-      disasterDisplay.innerText = data
+      console.log(data);
+      disasterDisplay.innerText = JSON.stringify(data);
+      
 
     })
     return;
 }
-
 
 submitEl.addEventListener('click', handleSearchFormSubmit);
 
