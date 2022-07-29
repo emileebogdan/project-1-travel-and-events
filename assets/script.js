@@ -54,7 +54,6 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
     })
     .then(function (data) {
       console.log(data);
-      // var list = document.getElementById('disaster')
       for (let i = 0; i < data.events.length; i++) {
         var li = document.createElement("li");
         li.append(data.events[i].title);
