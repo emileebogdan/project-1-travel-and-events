@@ -53,7 +53,13 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
     })
     .then(function (data) {
       console.log(data);
-      disasterDisplay.innerText = JSON.stringify(data);
+      // var list = document.getElementById('disaster')
+      for (let i = 0; i < data.events.length; i++) {
+       var ul = document.getElementById('disaster')
+        var li = document.createElement("li")
+       li.appendChild(disasterDisplay.innerText = data.events[i].title);
+       ul.appendChild(li);
+      }
       
 
     })
