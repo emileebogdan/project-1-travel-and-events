@@ -13,7 +13,6 @@ function handleSearchFormSubmit(event) {
 
 
 }
-searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
 function getLatLngOne(stateOne) {
   var geocoder = new google.maps.Geocoder();
@@ -24,7 +23,6 @@ function getLatLngOne(stateOne) {
       var lat1 = results[0].geometry.location.lat();
       var lng1 = results[0].geometry.location.lng();
       console.log(lat1, lng1);
-      // disasterSearch(lat1, lng1)
 
     }
   });
