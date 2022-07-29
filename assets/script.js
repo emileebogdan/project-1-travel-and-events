@@ -1,8 +1,9 @@
-var searchFormEl = document.querySelector('#search-form');
+var searchFormEl = document.querySelector('form');
 var submitEl = document.querySelector('#submit-button');
 
 
-submitEl.addEventListener('click', handleSearchFormSubmit);
+
+
 function handleSearchFormSubmit(event) {
   event.preventDefault();
   var stateOne = document.querySelector('#state1').value
@@ -10,7 +11,7 @@ function handleSearchFormSubmit(event) {
   getLatLngOne(stateOne)
   getLatLngTwo(stateTwo)
 
-
+  searchFormEl.classList.add("remove");
 
 }
 
@@ -52,6 +53,19 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
     .then(function (data) {
       console.log(data)
     })
+    return;
 }
 
+
+showData = data => {
+  const disasterDiv = document.getElementById("disaster");
+
+    data.forEach(data => {
+      const dataElement = document.createElement('p');
+      dataElement.innerText = 'Disaster: ${title}';
+      disasterDiv.append(dataElement);
+    });
+}
+
+submitEl.addEventListener('click', handleSearchFormSubmit);
 
