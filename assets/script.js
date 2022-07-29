@@ -5,6 +5,7 @@ var disasterText = document.getElementById("disasterList");
 
 
 
+
 function handleSearchFormSubmit(event) {
   event.preventDefault();
   var stateOne = document.querySelector('#state1').value
@@ -55,10 +56,9 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
       console.log(data);
       // var list = document.getElementById('disaster')
       for (let i = 0; i < data.events.length; i++) {
-       var ul = document.getElementById('disaster')
-        var li = document.createElement("li")
-       li.appendChild(disasterDisplay.innerText = data.events[i].title);
-       ul.appendChild(li);
+        var li = document.createElement("li");
+        li.append(data.events[i].title);
+        disasterDisplay.append(li);
       }
       
 
