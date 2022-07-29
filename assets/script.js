@@ -1,6 +1,7 @@
 var searchFormEl = document.querySelector('form');
 var submitEl = document.querySelector('#submit-button');
-
+var disasterDisplay = document.getElementById('disaster');
+var disasterText = document.getElementById("disasterList");
 
 
 
@@ -52,20 +53,12 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
     })
     .then(function (data) {
       console.log(data)
+      disasterDisplay.innerText = data
+
     })
     return;
 }
 
-
-showData = data => {
-  const disasterDiv = document.getElementById("disaster");
-
-    data.forEach(data => {
-      const dataElement = document.createElement('p');
-      dataElement.innerText = 'Disaster: ${title}';
-      disasterDiv.append(dataElement);
-    });
-}
 
 submitEl.addEventListener('click', handleSearchFormSubmit);
 
