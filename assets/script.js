@@ -68,11 +68,3 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
 }
 
 submitEl.addEventListener('click', handleSearchFormSubmit);
-
-// Original:
-// console.log(data);
-// for (let i = 0; i < data.events.length; i++) {
-//   var li = document.createElement("li");
-//   li.append(data.events[i].title);
-//   disasterDisplay.append(li);
-// }

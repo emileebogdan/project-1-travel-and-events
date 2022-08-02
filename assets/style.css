@@ -75,12 +75,10 @@ input::placeholder {
 }
 
 #disaster{
-  color: white;
   padding: 40px;
   font-size: 20px;
   flex: wrap;
+  width: 100%;
+  text-align: center;
 }
- 
-.disasterRows{
-  
-}
+
