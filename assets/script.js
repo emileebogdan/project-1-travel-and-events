@@ -54,12 +54,31 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
     })
     .then(function (data) {
       console.log(data);
+      // top row for my labels - disaster name, link, type. thead
+
+      var disHead = 
+
       for (let i = 0; i < data.events.length; i++) {
-        var li = document.createElement("li");
-        li.append(data.events[i].title);
-        disasterDisplay.append(li);
+
+        var disRow = i + 1;
+
+
+      // Title = (data.events[i].title);
+      // dis= (data.events[i].link);
+      // Cat = (data.events[i].categories[0].title);
+
+
+      //pseudo code for table stuff
+        var tableRow = `<tr>
+        <td>${data.events[i].title}</td>
+        <td>${data.events[i].link}</td>
+        <td>${data.events[i].categories[0].title}</td>
+        </tr>`
+
+        disasterDisplay.appendChild(disRow);
+        disasterDisplay.appendChild(tableRow);
       }
-      
+    
 
     })
     return;
@@ -67,3 +86,10 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
 
 submitEl.addEventListener('click', handleSearchFormSubmit);
 
+// Original:
+// console.log(data);
+// for (let i = 0; i < data.events.length; i++) {
+//   var li = document.createElement("li");
+//   li.append(data.events[i].title);
+//   disasterDisplay.append(li);
+// }
