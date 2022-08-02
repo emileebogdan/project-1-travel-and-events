@@ -80,5 +80,6 @@ input::placeholder {
   flex: wrap;
   width: 100%;
   text-align: center;
+  background-color: var(--blueA);
+  font-weight: bold;
 }
-
