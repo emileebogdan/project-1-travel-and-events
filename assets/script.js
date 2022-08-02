@@ -5,7 +5,7 @@ var disasterText = document.getElementById("disasterList");
 var disasterList = document.getElementById("disasterRows")
 
 
-
+disasterDisplay.classList.add("remove");
 
 function handleSearchFormSubmit(event) {
   event.preventDefault();
@@ -15,7 +15,7 @@ function handleSearchFormSubmit(event) {
   getLatLngTwo(stateTwo)
 
   searchFormEl.classList.add("remove");
-
+  disasterDisplay.classList.remove("remove");
 }
 
 function getLatLngOne(stateOne) {
