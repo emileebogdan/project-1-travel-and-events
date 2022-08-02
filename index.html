@@ -24,7 +24,19 @@
   <div class="form">
     <div class="searchbox">
       <h1> A Natural Disaster Search</h1>
-      <table id ="disaster"></table>
+      <table id ="disaster" class = "table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Disaster Name</th>
+            <th>Link</th>
+            <th>Disaster Type</th>
+          </tr>
+        </thead>
+        <tbody id = "disasterRows">
+    
+        </tbody>
+      </table>
       <!-- Changed from div to table -->
       <form>
         <input id="state1" class="input is-primary" type ="text" placeholder="Point A">

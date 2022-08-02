@@ -2,6 +2,7 @@ var searchFormEl = document.querySelector('form');
 var submitEl = document.querySelector('#submit-button');
 var disasterDisplay = document.getElementById('disaster');
 var disasterText = document.getElementById("disasterList");
+var disasterList = document.getElementById("disasterRows")
 
 
 
@@ -54,31 +55,13 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
     })
     .then(function (data) {
       console.log(data);
-      // top row for my labels - disaster name, link, type. thead
-
-      var disHead = 
-
-      for (let i = 0; i < data.events.length; i++) {
-
-        var disRow = i + 1;
-
-
-      // Title = (data.events[i].title);
-      // dis= (data.events[i].link);
-      // Cat = (data.events[i].categories[0].title);
-
-
-      //pseudo code for table stuff
-        var tableRow = `<tr>
-        <td>${data.events[i].title}</td>
-        <td>${data.events[i].link}</td>
-        <td>${data.events[i].categories[0].title}</td>
-        </tr>`
-
-        disasterDisplay.appendChild(disRow);
-        disasterDisplay.appendChild(tableRow);
+        for (let i = 0; i < data.events.length; i++) {
+          var disRow = i + 1;
+          var row = document.createElement("tr");
+          row.innerHTML = "<td>" + disRow + "</td> <td>" + data.events[i].title + "</td> <td><a href=" + data.events[i].link + ">Disaster Website</a></td> <td>" + data.events[i].categories[0].title + "</td>";
+      
+        disasterRows.append(row);
       }
-    
 
     })
     return;
