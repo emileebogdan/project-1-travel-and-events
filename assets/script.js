@@ -13,6 +13,10 @@ function handleSearchFormSubmit(event) {
   var stateTwo = document.querySelector('#state2').value
   getLatLngOne(stateOne)
   getLatLngTwo(stateTwo)
+  if(!stateTwo || !stateOne) {
+    alert("Please Select Both Locations for Accurate Results");
+    return false;
+  }
 
   searchFormEl.classList.add("remove");
   disasterDisplay.classList.remove("remove");
