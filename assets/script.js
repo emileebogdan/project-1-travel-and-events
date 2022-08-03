@@ -13,6 +13,10 @@ function handleSearchFormSubmit(event) {
   var stateTwo = document.querySelector('#state2').value
   getLatLngOne(stateOne)
   getLatLngTwo(stateTwo)
+  if(!stateTwo || !stateOne) {
+    alert("Please Select Both Locations for Accurate Results");
+    return false;
+  }
 
   searchFormEl.classList.add("remove");
   disasterDisplay.classList.remove("remove");
@@ -58,7 +62,7 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
         for (let i = 0; i < data.events.length; i++) {
           var disRow = i + 1;
           var row = document.createElement("tr");
-          row.innerHTML = "<td>" + disRow + "</td> <td>" + data.events[i].title + "</td> <td><a href=" + data.events[i].link + ">Disaster Website</a></td> <td>" + data.events[i].categories[0].title + "</td>";
+          row.innerHTML = "<td>" + disRow + "</td> <td>" + data.events[i].title + "</td> <td>" + data.events[i].geometry[0].date + "</td> <td>" + data.events[i].categories[0].title + "</td>";
       
         disasterRows.append(row);
       }
@@ -66,5 +70,4 @@ function disasterSearch(lat1, lng1, lat2, lng2) {
     })
     return;
 }
-
 submitEl.addEventListener('click', handleSearchFormSubmit);
